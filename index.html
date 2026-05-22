@@ -304,7 +304,7 @@
 
     /* =====================================================
 
-       HERO — FULL WIDTH, NO WASTED SPACE
+       HERO
 
     ===================================================== */
 
@@ -321,8 +321,6 @@
     .connection-line { fill:none; stroke:#f97316; stroke-width:1.8; opacity:.55; }
 
     .connection-particle { fill:#f97316; filter:drop-shadow(0 0 4px rgba(249,115,22,.8)); }
-
-    /* Hero inner: full width, space-between so content fills the viewport */
 
     .hero-inner {
 
@@ -347,8 +345,6 @@
       z-index: 10;
 
     }
-
-    /* ---- Profile card — left anchor ---- */
 
     .profile-card {
 
@@ -410,8 +406,6 @@
 
     .stat-lbl { font-size:.68rem; color:#9ca3af; text-transform:uppercase; letter-spacing:.08em; margin-top:.1rem; }
 
-    /* ---- Middle column: badge + heading + social cards ---- */
-
     .hero-middle {
 
       display: flex;
@@ -450,8 +444,6 @@
 
     .hero-divider { width:40px; height:3px; background:linear-gradient(90deg,#f97316,#f97316); border-radius:4px; margin-bottom:.5rem; }
 
-    /* ---- Social cards column: stacked on right ---- */
-
     .hero-right {
 
       display: flex;
@@ -467,8 +459,6 @@
       flex-shrink: 0;
 
     }
-
-    /* Profile link cards */
 
     .profile-link-card { text-decoration:none; display:block; }
 
@@ -519,8 +509,6 @@
       padding:.15rem .55rem; border-radius:100px;
 
     }
-
-    /* Hero CTAs */
 
     .hero-ctas { position:absolute; bottom:2rem; left:50%; transform:translateX(-50%); display:flex; gap:1rem; z-index:10; }
 
@@ -576,6 +564,76 @@
 
     /* =====================================================
 
+       FREELANCING
+
+    ===================================================== */
+
+    .freelance-wrap { width:100%; max-width:1200px; }
+
+    .freelance-card {
+
+      background:rgba(255,255,255,.82); backdrop-filter:blur(16px);
+
+      border-radius:1.5rem; border:1px solid rgba(255,255,255,.65);
+
+      box-shadow:0 8px 32px rgba(0,0,0,.08); padding:2.5rem;
+
+      position:relative; overflow:hidden;
+
+      transition:all .4s cubic-bezier(.34,1.56,.64,1);
+
+    }
+
+    .freelance-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,#f97316,#feb47b); }
+
+    .freelance-card:hover { transform:translateY(-6px); box-shadow:0 24px 60px rgba(0,0,0,.12); }
+
+    .freelance-inner { display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; align-items:start; }
+
+    .freelance-badge {
+
+      display:inline-flex; align-items:center; gap:.5rem; padding:.3rem .9rem;
+
+      border-radius:100px; font-size:.72rem; font-weight:700; letter-spacing:.06em;
+
+      text-transform:uppercase; margin-bottom:.85rem;
+
+      background:rgba(249,115,22,.1); color:#f97316;
+
+    }
+
+    .live-dot { width:7px; height:7px; border-radius:50%; background:#22c55e; animation:breathe 2s ease-in-out infinite; display:inline-block; }
+
+    .freelance-title { font-size:1.5rem; font-weight:800; color:#1f2937; margin-bottom:.75rem; }
+
+    .freelance-desc { font-size:.86rem; color:#6b7280; line-height:1.7; margin-bottom:1rem; }
+
+    .freelance-points { display:flex; flex-direction:column; gap:.55rem; margin-bottom:1.1rem; }
+
+    .freelance-points li { font-size:.83rem; color:#4b5563; line-height:1.65; padding-left:1.1rem; position:relative; }
+
+    .freelance-points li::before { content:''; position:absolute; left:0; top:.6rem; width:5px; height:5px; border-radius:50%; background:#f97316; display:block; }
+
+    .freelance-right { display:flex; flex-direction:column; gap:1rem; }
+
+    .freelance-stat-grid { display:grid; grid-template-columns:1fr 1fr; gap:.75rem; }
+
+    .fl-stat {
+
+      background:rgba(249,115,22,.05); border:1px solid rgba(249,115,22,.12);
+
+      border-radius:1rem; padding:1rem 1.1rem; text-align:center;
+
+    }
+
+    .fl-stat-num { font-size:1.5rem; font-weight:800; color:#f97316; }
+
+    .fl-stat-lbl { font-size:.68rem; color:#9ca3af; text-transform:uppercase; letter-spacing:.08em; margin-top:.15rem; }
+
+    .freelance-tech { display:flex; flex-wrap:wrap; gap:.35rem; }
+
+    /* =====================================================
+
        PROJECTS
 
     ===================================================== */
@@ -602,11 +660,9 @@
 
     .project-card:hover::before { opacity:1; }
 
-    .project-card.healthcare::before { background:linear-gradient(90deg,#10b981,#06b6d4); }
+    .project-card.ecommerce::before { background:linear-gradient(90deg,#f97316,#ef4444); }
 
-    .project-card.beauty::before { background:linear-gradient(90deg,#f97316,#f97316); }
-
-    .project-card.ai::before { background:linear-gradient(90deg,#f59e0b,#10b981); }
+    .project-card.faculty::before { background:linear-gradient(90deg,#6366f1,#8b5cf6); }
 
     .proj-featured { display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; align-items:center; }
 
@@ -616,11 +672,9 @@
 
     .proj-badge { display:inline-flex; align-items:center; padding:.25rem .75rem; border-radius:100px; font-size:.72rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; margin-bottom:.75rem; }
 
-    .proj-badge.healthcare { background:rgba(16,185,129,.1); color:#059669; }
+    .proj-badge.ecommerce { background:rgba(249,115,22,.1); color:#f97316; }
 
-    .proj-badge.beauty { background:rgba(249,115,22,.1); color:#f97316; }
-
-    .proj-badge.ai { background:rgba(245,158,11,.1); color:#d97706; }
+    .proj-badge.faculty { background:rgba(99,102,241,.1); color:#6366f1; }
 
     .proj-title { font-size:1.2rem; font-weight:800; color:#1f2937; margin-bottom:.6rem; }
 
@@ -635,6 +689,10 @@
     .proj-viz-panel { height:200px; border-radius:1rem; background:linear-gradient(135deg,rgba(249,115,22,.06),rgba(249,115,22,.06)); overflow:hidden; border:1px solid rgba(249,115,22,.1); }
 
     .proj-viz-panel canvas { width:100%; height:100%; }
+
+    .btn-live { background:linear-gradient(135deg,#22c55e,#16a34a); color:#fff; border-color:#16a34a; }
+
+    .btn-live:hover { background:linear-gradient(135deg,#16a34a,#15803d); border-color:#15803d; transform:translateY(-2px); }
 
     /* =====================================================
 
@@ -716,8 +774,6 @@
 
     .cert-date { font-size:.74rem; color:#9ca3af; }
 
-    /* Achievements strip */
-
     .achieve-strip {
 
       width:100%; max-width:1200px;
@@ -735,8 +791,6 @@
     .achieve-item { display:flex; align-items:center; gap:.75rem; font-size:.86rem; color:#1f2937; }
 
     .achieve-dot { color:#f97316; font-size:.7rem; }
-
-    /* Badges */
 
     .badges-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.25rem; width:100%; max-width:1200px; margin-top:2rem; }
 
@@ -880,8 +934,6 @@
 
     .contact-link-row:hover .cl-arrow { transform:translateX(4px); }
 
-    /* Contact form */
-
     .contact-form-wrap {
 
       background:rgba(255,255,255,.82); backdrop-filter:blur(16px);
@@ -1024,6 +1076,8 @@
 
       .plc-inner { width: 280px; }
 
+      .freelance-inner { grid-template-columns: 1fr; }
+
     }
 
     @media (max-width:900px) {
@@ -1060,6 +1114,8 @@
 
       .plc-inner { width: 100%; }
 
+      .freelance-stat-grid { grid-template-columns: 1fr 1fr; }
+
     }
 
   </style>
@@ -1068,32 +1124,19 @@
 
 <body>
 
-  <!-- Blobs -->
-
   <div class="blob blob-1"></div>
 
   <div class="blob blob-2"></div>
 
   <div class="blob blob-3"></div>
 
-  <!-- Cursor -->
-
   <div class="cursor-dot" id="cursorDot"></div>
-
-  <!-- Progress bar -->
 
   <div class="progress-bar" id="progressBar"></div>
 
-  <!-- Back to top -->
-
   <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
-  <!-- ===================================================
-
-       NAVBAR
-
-  =================================================== -->
-
+  <!-- NAVBAR -->
   <nav class="sticky-nav">
 
     <span class="nav-logo">Anu <span>Gill</span></span>
@@ -1103,6 +1146,8 @@
       <li><a href="#home-section">Home</a></li>
 
       <li><a href="#skills-section">Skills</a></li>
+
+      <li><a href="#freelancing-section">Freelancing</a></li>
 
       <li><a href="#projects-section">Projects</a></li>
 
@@ -1120,19 +1165,12 @@
 
   </nav>
 
-  <!-- ===================================================
-
-       HERO
-
-  =================================================== -->
-
+  <!-- HERO -->
   <section id="home-section">
 
     <svg id="connection-svg"></svg>
 
     <div class="hero-inner">
-
-      <!-- Profile Card — LEFT -->
 
       <div class="profile-card tilt-card reveal" id="profileCard">
 
@@ -1146,41 +1184,21 @@
 
         <p class="profile-bio">B.Tech CSE student at LPU building scalable web apps with the MERN stack. Passionate about clean code, great UX, and turning ideas into real digital products.</p>
 
-        <!-- <div class="stat-strip">
-
-          <div class="stat-item"><span class="stat-num">3+</span><span class="stat-lbl">Projects</span></div>
-
-          <div class="stat-item"><span class="stat-num">4+</span><span class="stat-lbl">Certs</span></div>
-
-          <div class="stat-item"><span class="stat-num">150+</span><span class="stat-lbl">Solved</span></div>
-
-        </div> -->
-
       </div>
-
-      <!-- Middle: Badge + heading -->
 
       <div class="hero-middle">
 
         <div class="reveal-right">
 
-          <!-- <div class="hero-badge"><span class="hero-badge-line"></span></div> -->
-
           <div class="hero-heading"></div>
 
           <div class="hero-sub"></div>
-
-          <!-- <div class="hero-divider"></div> -->
 
         </div>
 
       </div>
 
-      <!-- Right column — social cards -->
-
       <div class="hero-right" style="margin-left: 200px">
-
-        <!-- LinkedIn -->
 
         <a href="https://linkedin.com/in/anugill03/" target="_blank" class="profile-link-card reveal-right delay-100">
 
@@ -1208,8 +1226,6 @@
 
         </a>
 
-        <!-- GitHub -->
-
         <a href="https://github.com/Anugill05" target="_blank" class="profile-link-card reveal-right delay-200">
 
           <div class="plc-inner shimmer-card" style="background:#0d1117;">
@@ -1235,8 +1251,6 @@
           </div>
 
         </a>
-
-        <!-- LeetCode -->
 
         <a href="https://leetcode.com/u/Anu_gill/" target="_blank" class="profile-link-card reveal-right delay-300">
 
@@ -1272,8 +1286,6 @@
 
     </div>
 
-    <!-- CTA buttons -->
-
     <div class="hero-ctas">
 
       <a href="#projects-section" class="btn btn-dark floating">View Projects →</a>
@@ -1284,12 +1296,7 @@
 
   </section>
 
-  <!-- ===================================================
-
-       SKILLS
-
-  =================================================== -->
-
+  <!-- SKILLS -->
   <section id="skills-section">
 
     <div class="section-header reveal">
@@ -1356,6 +1363,8 @@
 
           <div class="skill-pill"><img src="https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg" alt="">MySQL</div>
 
+          <div class="skill-pill"><img src="https://www.vectorlogo.zone/logos/redis/redis-icon.svg" alt="">Redis</div>
+
         </div>
 
       </div>
@@ -1372,7 +1381,9 @@
 
           <div class="skill-pill"><img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="">Figma</div>
 
-          <div class="skill-pill"><img src="https://www.vectorlogo.zone/logos/vercel/vercel-icon.svg" alt="">Vercel</div>
+          <div class="skill-pill"><img src="https://www.vectorlogo.zone/logos/render/render-icon.svg" alt="" onerror="this.style.display='none'">Render</div>
+
+          <div class="skill-pill"><img src="https://www.vectorlogo.zone/logos/docker/docker-icon.svg" alt="">Docker</div>
 
           <div class="skill-pill">🧠 DSA · DBMS · OOPs</div>
 
@@ -1384,12 +1395,162 @@
 
   </section>
 
-  <!-- ===================================================
+  <!-- FREELANCING -->
+  <section id="freelancing-section">
 
-       PROJECTS
+    <div class="section-header reveal">
 
-  =================================================== -->
+      <p class="sec-label">Real-world client work</p>
 
+      <h2 class="sec-title">Freelancing</h2>
+
+    </div>
+
+    <div class="freelance-wrap">
+
+      <div class="freelance-card reveal">
+
+        <div class="freelance-inner">
+
+          <div>
+
+            <div class="freelance-badge">
+
+              <span class="live-dot"></span> Live · E-Commerce · Full Stack
+
+            </div>
+
+            <div class="freelance-title">Thrust3D — 3D Printing Service Platform</div>
+
+            <p class="freelance-desc">A production-grade full-stack e-commerce platform for a 3D printing business, live since May 2026. Built end-to-end with JWT authentication, Razorpay payment integration, a dynamic bulk pricing engine, drag-and-drop 3D file uploads, and complete order lifecycle management from cart to delivery tracking.</p>
+
+            <ul class="freelance-points">
+
+              <li>Engineered 25+ secure REST API endpoints with role-based access control, server-side price validation, bcrypt hashing, rate limiting, and an admin dashboard with product CRUD, order management, and revenue analytics.</li>
+
+              <li>Developed a responsive React SPA with Redux Toolkit state management, protected routes, real-time pricing, Recharts data visualization, and mock payment mode for full end-to-end testing.</li>
+
+              <li>Implemented drag-and-drop 3D file uploads via Multer and a complete order lifecycle from cart creation through Razorpay checkout to delivery tracking.</li>
+
+            </ul>
+
+            <div class="tech-chips freelance-tech">
+
+              <span class="tech-chip">React.js</span>
+
+              <span class="tech-chip">Redux Toolkit</span>
+
+              <span class="tech-chip">Tailwind CSS</span>
+
+              <span class="tech-chip">Node.js</span>
+
+              <span class="tech-chip">Express.js</span>
+
+              <span class="tech-chip">MongoDB</span>
+
+              <span class="tech-chip">Mongoose</span>
+
+              <span class="tech-chip">JWT</span>
+
+              <span class="tech-chip">Razorpay</span>
+
+              <span class="tech-chip">Multer</span>
+
+            </div>
+
+            <div class="proj-actions" style="margin-top:1.25rem;">
+
+              <a href="https://thrust3d.com/" target="_blank" class="btn btn-live">🌐 Visit Live Site</a>
+
+              <a href="https://github.com/Anugill05/Thrust3D" target="_blank" class="btn btn-dark">⌥ GitHub</a>
+
+            </div>
+
+          </div>
+
+          <div class="freelance-right">
+
+            <div class="freelance-stat-grid">
+
+              <div class="fl-stat">
+
+                <div class="fl-stat-num">25+</div>
+
+                <div class="fl-stat-lbl">REST API Endpoints</div>
+
+              </div>
+
+              <div class="fl-stat">
+
+                <div class="fl-stat-num">3</div>
+
+                <div class="fl-stat-lbl">User Roles (RBAC)</div>
+
+              </div>
+
+              <div class="fl-stat">
+
+                <div class="fl-stat-num">Live</div>
+
+                <div class="fl-stat-lbl">Since May 2026</div>
+
+              </div>
+
+              <div class="fl-stat">
+
+                <div class="fl-stat-num">100%</div>
+
+                <div class="fl-stat-lbl">Full-stack Build</div>
+
+              </div>
+
+            </div>
+
+            <div style="background:rgba(249,115,22,.05);border:1px solid rgba(249,115,22,.15);border-radius:1rem;padding:1.25rem;">
+
+              <div style="font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#f97316;margin-bottom:.6rem;">Key Highlights</div>
+
+              <ul style="display:flex;flex-direction:column;gap:.45rem;">
+
+                <li style="font-size:.82rem;color:#4b5563;padding-left:1rem;position:relative;">
+
+                  <span style="position:absolute;left:0;top:.55rem;width:5px;height:5px;border-radius:50%;background:#f97316;display:block;"></span>Razorpay payment gateway + HMAC verification
+
+                </li>
+
+                <li style="font-size:.82rem;color:#4b5563;padding-left:1rem;position:relative;">
+
+                  <span style="position:absolute;left:0;top:.55rem;width:5px;height:5px;border-radius:50%;background:#f97316;display:block;"></span>Dynamic bulk pricing engine
+
+                </li>
+
+                <li style="font-size:.82rem;color:#4b5563;padding-left:1rem;position:relative;">
+
+                  <span style="position:absolute;left:0;top:.55rem;width:5px;height:5px;border-radius:50%;background:#f97316;display:block;"></span>Admin dashboard with revenue analytics
+
+                </li>
+
+                <li style="font-size:.82rem;color:#4b5563;padding-left:1rem;position:relative;">
+
+                  <span style="position:absolute;left:0;top:.55rem;width:5px;height:5px;border-radius:50%;background:#f97316;display:block;"></span>3D file uploads with Multer
+
+                </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PROJECTS -->
   <section id="projects-section">
 
     <div class="section-header reveal">
@@ -1402,9 +1563,8 @@
 
     <div class="projects-wrap">
 
-      <!-- Featured -->
-
-      <div class="project-card healthcare tilt-card reveal">
+      <!-- FlashKart — Featured -->
+      <div class="project-card ecommerce reveal">
 
         <div class="proj-featured">
 
@@ -1412,96 +1572,68 @@
 
             <div class="proj-num">01</div>
 
-            <div class="proj-badge healthcare">🏥 Healthcare · MERN</div>
+            <div class="proj-badge ecommerce">⚡ E-Commerce · High Concurrency</div>
 
-            <div class="proj-title">CareHub — OPD Queue Management</div>
+            <div class="proj-title">FlashKart — High-Concurrency E-Commerce Platform</div>
 
-            <p class="proj-desc">MERN-based OPD queue system streamlining patient flow across hospital departments. Secure JWT + bcrypt auth, role-based access for admins, doctors &amp; patients, RESTful APIs with real-time queue updates backed by MongoDB.</p>
+            <p class="proj-desc">A production-ready e-commerce platform engineered to handle 10K+ simultaneous users during flash sales. Uses Redis atomic operations and distributed locking to eliminate race conditions and prevent duplicate orders. Integrated Razorpay with server-side HMAC-SHA256 signature verification and Redis-based rate limiting for consistent performance under traffic spikes.</p>
 
             <div class="tech-chips">
 
-              <span class="tech-chip">React.js</span><span class="tech-chip">Node.js</span><span class="tech-chip">Express.js</span><span class="tech-chip">MongoDB</span><span class="tech-chip">JWT</span><span class="tech-chip">bcrypt</span>
+              <span class="tech-chip">React.js</span><span class="tech-chip">Node.js</span><span class="tech-chip">Express.js</span><span class="tech-chip">MongoDB</span><span class="tech-chip">Redis</span><span class="tech-chip">Razorpay</span><span class="tech-chip">JWT</span><span class="tech-chip">Nodemailer</span>
 
             </div>
 
             <div class="proj-actions">
 
-              <a href="https://github.com/Anugill05" target="_blank" class="btn btn-dark">⌥ GitHub</a>
+              <a href="https://ecommerce-1-782g.onrender.com" target="_blank" class="btn btn-live">🌐 Live Demo</a>
+
+              <a href="https://github.com/Anugill05/Ecommerce" target="_blank" class="btn btn-dark">⌥ GitHub</a>
 
             </div>
 
           </div>
 
-          <div class="proj-viz-panel"><canvas id="careViz"></canvas></div>
+          <div class="proj-viz-panel"><canvas id="flashViz"></canvas></div>
 
         </div>
 
       </div>
 
-      <!-- Row 2 -->
-
-      <div class="proj-pair">
-
-        <div class="project-card beauty tilt-card reveal-left">
+      <!-- Row 2: FacultyUp -->
+      <div class="project-card faculty reveal-left">
 
           <div class="proj-num">02</div>
 
-          <div class="proj-badge beauty">💄 Beauty · Full Stack</div>
+          <div class="proj-badge faculty">🎓 EdTech · Laravel · React</div>
 
-          <div class="proj-title">GlamoraHub</div>
+          <div class="proj-title">FacultyUp — Faculty Performance Platform</div>
 
-          <p class="proj-desc">Full-stack rental &amp; booking platform for beauty and fashion services. Real-time booking of 100+ services, rental scheduling, secure payments with JWT auth.</p>
+          <p class="proj-desc">A full-stack faculty capacity building and performance assessment platform built for LPU. Features a weighted performance scoring engine from student ratings, attendance, achievements and workshops. Three-role system (Admin, Teacher, Student) with anonymous student feedback, achievement tracking, workshop management, and admin analytics dashboard.</p>
 
           <div class="tech-chips">
 
-            <span class="tech-chip">Node.js</span><span class="tech-chip">Express.js</span><span class="tech-chip">MongoDB</span><span class="tech-chip">JWT</span><span class="tech-chip">HTML/CSS/JS</span>
+            <span class="tech-chip">React.js 18</span><span class="tech-chip">Laravel 11</span><span class="tech-chip">PHP 8.2</span><span class="tech-chip">MongoDB Atlas</span><span class="tech-chip">JWT Auth</span><span class="tech-chip">Axios</span><span class="tech-chip">Render.com</span>
 
           </div>
 
           <div class="proj-actions">
 
-            <a href="https://github.com/Anugill05" target="_blank" class="btn btn-dark">⌥ GitHub</a>
+            <a href="https://facultyup1-frontend.onrender.com" target="_blank" class="btn btn-live">🌐 Live Demo</a>
+
+            <a href="https://github.com/Anugill05/FacultyUp" target="_blank" class="btn btn-dark">⌥ GitHub</a>
 
           </div>
 
         </div>
 
-        <div class="project-card ai tilt-card reveal-right">
-
-          <div class="proj-num">03</div>
-
-          <div class="proj-badge ai">🤖 AI · Telemedicine</div>
-
-          <div class="proj-title">AI Telemedicine Bot</div>
-
-          <p class="proj-desc">Telemedicine chatbot delivering instant healthcare guidance and locating nearby hospitals. Rule-based symptom analysis in Python, ~70% correctness. Integrated OpenStreetMap &amp; Overpass APIs.</p>
-
-          <div class="tech-chips">
-
-            <span class="tech-chip">Python</span><span class="tech-chip">HTML/CSS/JS</span><span class="tech-chip">OpenStreetMap</span><span class="tech-chip">Overpass API</span>
-
-          </div>
-
-          <div class="proj-actions">
-
-            <a href="https://github.com/Anugill05" target="_blank" class="btn btn-dark">⌥ GitHub</a>
-
-          </div>
-
-        </div>
-
-      </div>
+        
 
     </div>
 
   </section>
 
-  <!-- ===================================================
-
-       EXPERIENCE
-
-  =================================================== -->
-
+  <!-- EXPERIENCE -->
   <section id="experience-section">
 
     <div class="section-header reveal">
@@ -1556,7 +1688,7 @@
 
         <div class="exp-title">B.Tech — Computer Science &amp; Engineering</div>
 
-        <p class="exp-sub">Phagwara, Punjab · CGPA: 7.24</p>
+        <p class="exp-sub">Phagwara, Punjab · CGPA: 7.49</p>
 
         <ul class="exp-list">
 
@@ -1580,12 +1712,7 @@
 
   </section>
 
-  <!-- ===================================================
-
-       CERTIFICATES
-
-  =================================================== -->
-
+  <!-- CERTIFICATES -->
   <section id="certificates">
 
     <div class="section-header reveal">
@@ -1732,12 +1859,7 @@
 
   </section>
 
-  <!-- ===================================================
-
-       RESUME
-
-  =================================================== -->
-
+  <!-- RESUME -->
   <section id="resume">
 
     <div class="section-header reveal">
@@ -1806,12 +1928,7 @@
 
   </section>
 
-  <!-- ===================================================
-
-       CONTACT
-
-  =================================================== -->
-
+  <!-- CONTACT -->
   <section id="contact">
 
     <div class="section-header reveal">
@@ -1836,7 +1953,7 @@
 
         <div class="contact-links">
 
-          <a href="/cdn-cgi/l/email-protection#93f4fafffff2fde6a1a3a3a0d3f4fef2faffbdf0fcfe" class="contact-link-row">
+          <a href="mailto:gillanu2003@gmail.com" class="contact-link-row">
 
             <div class="cl-icon">
 
@@ -1844,7 +1961,7 @@
 
             </div>
 
-            <div class="cl-text"><span class="cl-label">Email</span><span class="cl-val"><span class="__cf_email__" data-cfemail="c9aea0a5a5a8a7bcfbf9f9fa89aea4a8a0a5e7aaa6a4">gillanu01234@gmail.com</span></span></div>
+            <div class="cl-text"><span class="cl-label">Email</span><span class="cl-val">gillanu2003@gmail.com</span></div>
 
             <span class="cl-arrow">→</span>
 
@@ -1952,7 +2069,7 @@
 
         <div class="form-success" id="formError" style="background:rgba(249,115,22,.08);border-color:rgba(249,115,22,.25);color:#f97316;">
 
-          ⚠️ Something went wrong. Please email me directly at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="36515f5a5a5758430406060576515b575f5a1855595b">[email&#160;protected]</a>
+          ⚠️ Something went wrong. Please email me directly at gillanu2003@gmail.com
 
         </div>
 
@@ -1963,7 +2080,6 @@
   </section>
 
   <!-- Image Modal -->
-
   <div id="imageModal" onclick="if(event.target===this)this.classList.remove('open')">
 
     <img id="modalImage" src="" alt="">
@@ -1971,7 +2087,6 @@
   </div>
 
   <!-- Resume Modal -->
-
   <div id="resumeModal" onclick="if(event.target===this)closeResumeModal()">
 
     <div class="resume-modal-inner">
@@ -2009,7 +2124,6 @@
   </div>
 
   <!-- Footer -->
-
   <footer>
 
     <span class="footer-logo">Anu <span>Gill</span></span>
@@ -2018,284 +2132,167 @@
 
   </footer>
 
-  <!-- ===================================================
-
-       SCRIPTS
-
-  =================================================== -->
-
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
 
     /* ---- Custom Cursor ---- */
-
     const dot = document.getElementById('cursorDot');
-
     document.addEventListener('mousemove', e => {
-
       dot.style.left = e.clientX + 'px';
-
       dot.style.top = e.clientY + 'px';
-
     });
-
     document.querySelectorAll('a,button,.tilt-card,.skill-pill,.badge-card,.cert-card').forEach(el => {
-
       el.addEventListener('mouseenter', () => { dot.style.transform='translate(-50%,-50%) scale(2)'; dot.style.background='#f97316'; });
-
       el.addEventListener('mouseleave', () => { dot.style.transform='translate(-50%,-50%) scale(1)'; dot.style.background='#f97316'; });
-
     });
 
     /* ---- Intersection Observer (reveal) ---- */
-
     const io = new IntersectionObserver(entries => {
-
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('active'); });
-
     }, { threshold: .1, rootMargin: '0px 0px -40px 0px' });
-
     document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el => io.observe(el));
 
-    /* ---- Scroll: progress + back-to-top ---- */
-
-    window.addEventListener('scroll', () => {
-
-      const s = document.documentElement.scrollTop;
-
-      const h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-
-      document.getElementById('progressBar').style.width = (s / h * 100) + '%';
-
-      document.getElementById('backToTop').classList.toggle('visible', s > 400);
-
+    /* ---- project-card hover top line fix ---- */
+    document.querySelectorAll('.proj-top-line').forEach(line => {
+      const card = line.closest('.project-card');
+      card.addEventListener('mouseenter', () => line.style.opacity = '1');
+      card.addEventListener('mouseleave', () => line.style.opacity = '0');
     });
 
+    /* ---- Scroll: progress + back-to-top ---- */
+    window.addEventListener('scroll', () => {
+      const s = document.documentElement.scrollTop;
+      const h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      document.getElementById('progressBar').style.width = (s / h * 100) + '%';
+      document.getElementById('backToTop').classList.toggle('visible', s > 400);
+    });
     document.getElementById('backToTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
     /* ---- 3D Tilt ---- */
-
     document.querySelectorAll('.tilt-card').forEach(card => {
-
       card.addEventListener('mousemove', e => {
-
         const r = card.getBoundingClientRect();
-
         const x = (e.clientX - r.left) / r.width - .5;
-
         const y = (e.clientY - r.top) / r.height - .5;
-
         card.style.transform = `perspective(900px) rotateX(${y*-7}deg) rotateY(${x*7}deg) scale(1.02)`;
-
       });
-
       card.addEventListener('mouseleave', () => { card.style.transform = ''; });
-
     });
 
     /* ---- SVG Connection Lines ---- */
-
     function drawConnections() {
-
       const svg = document.getElementById('connection-svg');
-
       const mc = document.getElementById('profileCard');
-
       const lcs = document.querySelectorAll('.profile-link-card');
-
       const con = document.getElementById('home-section');
-
       svg.innerHTML = '';
-
       if (!mc || !lcs.length) return;
-
       const cr = con.getBoundingClientRect();
-
       const mr = mc.getBoundingClientRect();
-
       const desk = window.innerWidth >= 900;
-
       lcs.forEach((card, i) => {
-
         const r = card.getBoundingClientRect();
-
         let x1,y1,x2,y2;
-
         if (desk) { x1=mr.right-cr.left; y1=mr.top+mr.height/2-cr.top; x2=r.left-cr.left; y2=r.top+r.height/2-cr.top; }
-
         else { x1=mr.left+mr.width/2-cr.left; y1=mr.bottom-cr.top; x2=r.left+r.width/2-cr.left; y2=r.top-cr.top; }
-
         const c1x=desk?(x1+x2)/2:x1, c1y=desk?y1:(y1+y2)/2;
-
         const c2x=desk?(x1+x2)/2:x2, c2y=desk?y2:(y1+y2)/2;
-
         const d=`M ${x1} ${y1} C ${c1x} ${c1y}, ${c2x} ${c2y}, ${x2} ${y2}`;
-
         const path=document.createElementNS('http://www.w3.org/2000/svg','path');
-
         path.setAttribute('d',d); path.setAttribute('class','connection-line'); svg.appendChild(path);
-
         const circle=document.createElementNS('http://www.w3.org/2000/svg','circle');
-
         circle.setAttribute('r','4'); circle.setAttribute('class','connection-particle');
-
         const am=document.createElementNS('http://www.w3.org/2000/svg','animateMotion');
-
         am.setAttribute('dur',`${2+i*.5}s`); am.setAttribute('repeatCount','indefinite'); am.setAttribute('path',d);
-
         circle.appendChild(am); svg.appendChild(circle);
-
       });
-
     }
-
     window.addEventListener('load', drawConnections);
-
     window.addEventListener('resize', drawConnections);
-
     setTimeout(drawConnections, 800);
 
-    /* ---- CareHub Canvas Viz ---- */
-
+    /* ---- FlashKart Canvas Viz ---- */
     (function(){
-
-      const canvas = document.getElementById('careViz');
-
+      const canvas = document.getElementById('flashViz');
       if (!canvas) return;
-
       const ctx = canvas.getContext('2d');
-
       function resize(){ canvas.width=canvas.parentElement.offsetWidth||300; canvas.height=canvas.parentElement.offsetHeight||200; }
-
       resize(); window.addEventListener('resize',resize);
-
-      const NODES=[{label:'Register',hue:340,x:.14,y:.5},{label:'Triage',hue:355,x:.36,y:.22},{label:'Queue',hue:320,x:.36,y:.78},{label:'Doctor',hue:345,x:.62,y:.35},{label:'Records',hue:300,x:.62,y:.72},{label:'Discharge',hue:330,x:.86,y:.52}];
-
+      const NODES=[
+        {label:'User Login',hue:25,x:.1,y:.5},
+        {label:'OTP Auth',hue:35,x:.3,y:.22},
+        {label:'Flash Sale',hue:15,x:.3,y:.78},
+        {label:'Redis Lock',hue:30,x:.55,y:.38},
+        {label:'Order DB',hue:20,x:.55,y:.72},
+        {label:'Razorpay',hue:40,x:.82,y:.5}
+      ];
       const EDGES=[[0,1],[0,2],[1,3],[2,3],[3,4],[3,5],[4,5]];
-
       const packets=[];
-
       setInterval(()=>{ const e=EDGES[Math.floor(Math.random()*EDGES.length)]; packets.push({from:e[0],to:e[1],p:0,speed:.018+Math.random()*.012}); },350);
-
       let t=0;
-
       function frame(){
-
         const W=canvas.width,H=canvas.height; ctx.clearRect(0,0,W,H); t+=.016;
-
         const pos=NODES.map(n=>({x:n.x*W,y:n.y*H}));
-
         EDGES.forEach(([a,b])=>{ const g=ctx.createLinearGradient(pos[a].x,pos[a].y,pos[b].x,pos[b].y); g.addColorStop(0,`hsla(${NODES[a].hue},65%,70%,.2)`); g.addColorStop(1,`hsla(${NODES[b].hue},65%,70%,.2)`); ctx.beginPath(); ctx.moveTo(pos[a].x,pos[a].y); ctx.lineTo(pos[b].x,pos[b].y); ctx.strokeStyle=g; ctx.lineWidth=1.2; ctx.stroke(); });
-
         packets.forEach((pkt,i)=>{ pkt.p+=pkt.speed; const a=pos[pkt.from],b=pos[pkt.to]; const px=a.x+(b.x-a.x)*pkt.p,py=a.y+(b.y-a.y)*pkt.p; const life=Math.min(pkt.p*3,1,(1-pkt.p)*3); const hue=NODES[pkt.from].hue; const gw=ctx.createRadialGradient(px,py,0,px,py,10); gw.addColorStop(0,`hsla(${hue},80%,65%,${life*.4})`); gw.addColorStop(1,'transparent'); ctx.beginPath(); ctx.arc(px,py,10,0,Math.PI*2); ctx.fillStyle=gw; ctx.fill(); ctx.beginPath(); ctx.arc(px,py,3,0,Math.PI*2); ctx.fillStyle=`hsla(${hue},75%,60%,${life*.9})`; ctx.fill(); if(pkt.p>=1)packets.splice(i,1); });
-
         NODES.forEach((n,i)=>{ const {x,y}=pos[i]; const pulse=1+.05*Math.sin(t*1.4+i*1.1); const tw=ctx.measureText(n.label).width+20; const ph=18*pulse,pr=9*pulse; const glow=ctx.createRadialGradient(x,y,0,x,y,24*pulse); glow.addColorStop(0,`hsla(${n.hue},75%,70%,.18)`); glow.addColorStop(1,'transparent'); ctx.beginPath(); ctx.arc(x,y,24*pulse,0,Math.PI*2); ctx.fillStyle=glow; ctx.fill(); ctx.save(); ctx.translate(x,y); ctx.beginPath(); ctx.roundRect(-tw/2,-ph/2,tw,ph,pr); ctx.fillStyle=`hsla(${n.hue},60%,97%,.96)`; ctx.fill(); ctx.strokeStyle=`hsla(${n.hue},60%,72%,.45)`; ctx.lineWidth=1.2; ctx.stroke(); ctx.font=`500 ${Math.max(H*.055,8)}px system-ui,sans-serif`; ctx.fillStyle=`hsla(${n.hue},45%,32%,.9)`; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillText(n.label,0,0); ctx.restore(); });
-
         requestAnimationFrame(frame);
-
       }
-
       frame();
-
     })();
 
-    /* ---- Contact Form — Formspree fetch (ID: myzjgqor) ---- */
-
+    /* ---- Contact Form — Formspree ---- */
     document.getElementById('contactForm').addEventListener('submit', async function(e) {
-
       e.preventDefault();
-
       const btn = document.getElementById('submitBtn');
-
       const ok = document.getElementById('formSuccess');
-
       const err = document.getElementById('formError');
-
       const form = this;
-
       btn.textContent = '⏳ Sending…';
-
       btn.disabled = true;
-
       ok.classList.remove('show');
-
       err.classList.remove('show');
-
       try {
-
         const res = await fetch('https://formspree.io/f/myzjgqor', {
-
           method: 'POST',
-
           headers: { 'Accept': 'application/json' },
-
           body: new FormData(form)
-
         });
-
         if (res.ok) {
-
           form.style.display = 'none';
-
           ok.classList.add('show');
-
         } else {
-
           const data = await res.json().catch(()=>({}));
-
           btn.textContent = '✉ Send Message';
-
           btn.disabled = false;
-
           err.classList.add('show');
-
           console.error('Formspree error:', data);
-
         }
-
       } catch(ex) {
-
         btn.textContent = '✉ Send Message';
-
         btn.disabled = false;
-
         err.classList.add('show');
-
         console.error('Network error:', ex);
-
       }
-
     });
 
     /* ---- Certificate image modal ---- */
-
     const imgModal = document.getElementById('imageModal');
-
     const modalImg = document.getElementById('modalImage');
-
     document.querySelectorAll('.cert-preview').forEach(img => {
-
       img.style.cursor = 'pointer';
-
       img.addEventListener('click', () => { modalImg.src = img.src; imgModal.classList.add('open'); });
-
     });
-
     document.addEventListener('keydown', e => {
-
       if (e.key === 'Escape') { imgModal.classList.remove('open'); closeResumeModal(); }
-
     });
 
     /* ---- Resume modal ---- */
-
     function openResumeModal() { document.getElementById('resumeModal').classList.add('open'); document.body.style.overflow='hidden'; }
-
     function closeResumeModal() { document.getElementById('resumeModal').classList.remove('open'); document.body.style.overflow=''; }
-
     document.getElementById('previewResumeBtn').addEventListener('click', openResumeModal);
 
   </script>
 
 </body>
 
-</html> 
+</html>
